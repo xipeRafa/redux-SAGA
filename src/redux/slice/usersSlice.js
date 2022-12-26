@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit"
 
 const users = createSlice({
     name: 'usersSlice',
@@ -27,5 +27,7 @@ const users = createSlice({
         }
     }
 })
- export const { getUsersSlice, addUserSlice, editUserSlice, deleteUserSlice } = users.actions
+
+export const { getUsersSlice, addUserSlice, editUserSlice, deleteUserSlice } = users.actions
+
 export default users.reducer 

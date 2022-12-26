@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
+import React, { useEffect } from 'react'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import TableHead from '@mui/material/TableHead'
+import TableRow from '@mui/material/TableRow'
+import Paper from '@mui/material/Paper'
+import Button from '@mui/material/Button'
 
-import { useDispatch, useSelector } from 'react-redux';
-import { setUserSlice } from '../redux/slice/user';
+import { useDispatch, useSelector } from 'react-redux'
+import { setUserSlice } from '../redux/slice/user'
 import TYPES from "../redux/types"
 
 export default function MyTable() {
@@ -48,7 +48,9 @@ export default function MyTable() {
                             </TableCell>
 
                             <TableCell align="right">
-                                <Button onClick={() => dispatch({ type: TYPES.DELETE_USER_BY_ID, id: user.id })} fullWidth variant="contained">Delete</Button>
+                                <Button onClick={() => dispatch({ type: TYPES.DELETE_USER_BY_ID, id: user.id })} fullWidth variant="contained">
+                                    Delete
+                                </Button>
                             </TableCell>
 
                         </TableRow>
@@ -57,5 +59,5 @@ export default function MyTable() {
             </Table>
             
         </TableContainer>
-    );
+    )
 }

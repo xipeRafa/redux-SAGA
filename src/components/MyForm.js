@@ -18,8 +18,12 @@ const MyForm = () => {
     }
 
     const handleSubmit = () => {
-        
-        user.id === 0 
+        if( user.name === '' || user.email === '' || user.password === ''){
+            console.log('empty field')
+            return
+        }
+
+       user.id === 0 
             ? 
                 dispatch({ type: TYPES.CREATE_USER, 
                     user: { 
@@ -37,7 +41,7 @@ const MyForm = () => {
         }))
     }
 
-    return 
+    return (
       <>
         <div style={{ marginBottom: '40px', padding:'20px',backgroundColor:'lightgray', }}>
 
@@ -53,9 +57,12 @@ const MyForm = () => {
                 onChange={handleChange('password')} placeholder="Enter Password" value={user.password} fullWidth />
 
             <Button style={{ marginBottom: '20px' }}    
-                onClick={() => handleSubmit()} variant="contained" fullWidth>Submit</Button>
+                onClick={() => handleSubmit()} variant="contained" fullWidth>
+                    Submit
+            </Button>
         </div >
       </>
+    )
 }
 
 export default MyForm

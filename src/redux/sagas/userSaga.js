@@ -1,11 +1,12 @@
 
-import * as api from '../../apis/index';
-import TYPES from "../types"
+import * as api from '../../apis/index'
+import * as sliceUsers from '../slice/usersSlice'
 
 import { setUserSlice } from '../slice/user'
-
-import * as sliceUsers from '../slice/usersSlice';
 import { put, takeEvery } from 'redux-saga/effects'
+
+import TYPES from "../types"
+
 
 
 export function* getUsersSaga() {
